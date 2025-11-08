@@ -21,6 +21,10 @@ jobs:
           npm init -y
           npm install playwright
 
+      - name: Install Playwright browsers
+        run: |
+          npx playwright install --with-deps
+
       - name: Run scrape
         run: |
           node scrape.js
